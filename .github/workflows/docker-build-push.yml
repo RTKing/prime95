@@ -3,8 +3,10 @@ name: Docker Build & Push
 on:
   push:
     branches:
-      - master
+      - main
       - feature/*
+      - release/*
+      - hotfix/*
     paths-ignore:
       - 'README.md'
       - 'docker-compose.yml'
@@ -58,3 +60,4 @@ jobs:
             labels: ${{ steps.meta.outputs.labels }}
             cache-from: type=gha
             cache-to: type=gha,mode=max
+
