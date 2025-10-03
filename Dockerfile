@@ -6,7 +6,7 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
         apt-get -y update && \
         apt-get install -yq curl 
 
-RUN curl -SL http://www.mersenne.org/ftp_root/gimps/p95v3019b20.linux64.tar.gz | tar -xz mprime && mv mprime /usr/sbin && chmod +x /usr/sbin/mprime
+RUN curl -SL https://download.mersenne.ca/gimps/v30/30.19/p95v3019b20.linux64.tar.gz | tar -xz mprime && mv mprime /usr/sbin && chmod +x /usr/sbin/mprime
 
 COPY runprime /
 RUN chmod +x ./runprime
