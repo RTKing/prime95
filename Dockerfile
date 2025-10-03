@@ -14,4 +14,4 @@ RUN chmod +x ./runprime
 RUN mkdir prime
 
 # CMD ["/bin/bash", "-c", "./runprime"]
-CMD ["/bin/bash"]
+CMD ["sleep", "infinity"]
